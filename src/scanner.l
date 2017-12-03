@@ -296,6 +296,7 @@ addrstring	({macaddr}|{ip4addr}|{ip6addr})
 "memory"		{ return MEMORY; }
 
 "flow"			{ return FLOW; }
+"offload"		{ return OFFLOAD; }
 "meter"			{ return METER; }
 "meters"		{ return METERS; }
 

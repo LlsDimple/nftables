@@ -248,6 +248,7 @@ int nft_lex(void *, void *, void *);
 %token SIZE			"size"
 
 %token FLOW			"flow"
+%token OFFLOAD			"offload"
 %token METER			"meter"
 %token METERS			"meters"
 
@@ -3383,6 +3384,10 @@ meta_stmt		:	META	meta_key	SET	stmt_expr
 			|	NOTRACK
 			{
 				$$ = notrack_stmt_alloc(&@$);
+			}
+			|	FLOW	OFFLOAD	AT string
+			{
+				$$ = flow_offload_stmt_alloc(&@$, $4);
 			}
 			;
 

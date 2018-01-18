@@ -238,6 +238,7 @@ addrstring	({macaddr}|{ip4addr}|{ip6addr})
 
 "hook"			{ return HOOK; }
 "device"		{ return DEVICE; }
+"devices"		{ return DEVICES; }
 "table"			{ return TABLE; }
 "tables"		{ return TABLES; }
 "chain"			{ return CHAIN; }
@@ -249,6 +250,7 @@ addrstring	({macaddr}|{ip4addr}|{ip6addr})
 "element"		{ return ELEMENT; }
 "map"			{ return MAP; }
 "maps"			{ return MAPS; }
+"flowtable"		{ return FLOWTABLE; }
 "handle"		{ return HANDLE; }
 "ruleset"		{ return RULESET; }
 "trace"			{ return TRACE; }
